@@ -14,26 +14,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-        </thead>-->
-		                     <%     	Date date=new Date();
+                   			<%  Date date=new Date();
 			                   	String TIME_SERVER = "0.in.pool.ntp.org";   
 			                   	NTPUDPClient timeClient = new NTPUDPClient();
 			                   	InetAddress inetAddress = InetAddress.getByName(TIME_SERVER);
 			                   	TimeInfo timeInfo = timeClient.getTime(inetAddress);
 			                   	long returnTime = timeInfo.getMessage().getTransmitTimeStamp().getTime();
-			                   	//long returnTime = timeInfo.getMessage().getReceiveTimeStamp().getTime();
-			                   	//Date time = new Date(returnTime);
 			                   	Timestamp time=new Timestamp(returnTime);
-			                   //	DateFormat inputDF  = new SimpleDateFormat("MM/dd/yy");
-			                   
-
-			                   //	Calendar cal = Calendar.getInstance();
-			                   //	cal.setTime(time);
-
-			                  // 	int month = cal.get(Calendar.MONTH)+1;
-			                   //	int day = cal.get(Calendar.DAY_OF_MONTH);
-			                   	//int year = cal.get(Calendar.YEAR);
-
 			                   	System.out.println(time);%>
 
 </body>

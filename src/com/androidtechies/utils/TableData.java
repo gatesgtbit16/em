@@ -1,4 +1,4 @@
-package utils;
+package com.androidtechies.utils;
 
 public class TableData {
 
